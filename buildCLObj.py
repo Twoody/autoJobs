@@ -49,7 +49,6 @@ def findlinks(html):
 def findemails(html):
 	'''
 	Return list of emails found in html text;
-	TODO: TEST THIS!!!
 	'''
 	emailRE = re.compile('[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.(?:com|org|gov)')
 	emails  = emailRE.findall(html)
@@ -103,18 +102,24 @@ def buildCLObj(url):
 			foundlinks  = findlinks(userbody)
 			foundlinks  = filterlinks(foundlinks)
 			foundemails = findemails(userbody)
-			for link in foundlinks:
-				print(link)
-			for email in foundemails:
-				print(email)
 			clobj[cnt]['linksinpage']  = foundlinks
 			clobj[cnt]['emailsinpage'] = foundemails
 		cnt += 1
-		if cnt > 1:
-			break
-	print('NUMBER WITH userbody: ' + str(cntWithSection))
 	return clobj
 
+def printCLObj(clobj):
+	for obj in clobj:
+		str = ""
+		emails = obj['emailsinpage']
+		links = obj['linksinpage']
+		str += obj['href']  + "\n" 
+		str += obj['date']  + "\n"  
+		str += obj['title'] + "\n" 
+		for email in emails:
+			str += email + "\n" 
+		for link in links:
+			str += link + "\n" 
+		print(str)
 if __name__ == "__main__":
 	'''
 	Tanner 20180824
@@ -123,4 +128,5 @@ if __name__ == "__main__":
 		python3 buildCLObj.py > out.temp
 	'''
 	clobj = buildCLObj("https://orangecounty.craigslist.org/d/software-qa-dba-etc/search/sof")
-	
+	print("TOTAL ENTRIES:\t" + str(len(clobj)))
+	printCLObj(clobj)
