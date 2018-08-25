@@ -1,0 +1,42 @@
+MATCHES: 241
+
+<span class="icon icon-star" role="button">             
+	<span class="screen-reader-text">
+		favorite this post
+	</span>         
+</span>              
+<time 
+	class="result-date" 
+	datetime="2018-08-24 10:47" 
+	title="Fri 24 Aug 10:47:19 AM"
+>
+	Aug 24
+</time>           
+<a href="https://orangecounty.craigslist.org/sof/d/net-programmer/6679723949.html" data-id="6679723949" class="result-title hdrlnk">
+	.NET Programmer
+</a>
+<span class="result-meta">                   
+	<span class="result-hood"> 
+		(Orange)
+	</span>                  
+	<span class="result-tags">                     
+		<span class="maptag" data-pid="6679723949">
+			map
+		</span>               
+	</span>                  
+	<span class="banish icon icon-trash" role="button">                     
+		<span class="screen-reader-text">
+			hide this posting
+		</span>                 
+	</span>              
+	<span class="unbanish icon icon-trash red" role="button" aria-hidden="true">
+	</span>             
+	<a href="#" class="restore-link">                 
+		<span class="restore-narrow-text">
+			restore
+		</span>                 
+		<span class="restore-wide-text">
+			restore this posting
+		</span>             
+	</a>          
+</span>     
